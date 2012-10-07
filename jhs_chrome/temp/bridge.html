@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<meta charset="utf-8" />
+	<title></title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta content="telephone=no" name="format-detection" />
+
+	<script type="text/javascript">// <![CDATA[
+        var itemId = 15658865600;
+        var browser = {
+            versions: function () {
+                var u = navigator.userAgent, app = navigator.appVersion;
+                return {//移动终端浏览器版本信息
+                    trident: u.indexOf('Trident') > -1, //IE内核
+                    presto: u.indexOf('Presto') > -1, //opera内核
+                    webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                    gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                    mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+                    ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                    android: u.indexOf('Android') > -1, //android终端
+                    iPhone: u.indexOf('iPhone') > -1, //是否为iPhone
+                    iPad: u.indexOf('iPad') > -1, //是否iPad
+                    webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+                    };
+                } (),
+            language: (navigator.browserLanguage || navigator.language).toLowerCase()
+        }
+                                   //document.writeln("语言版本: " + browser.language);
+                                   //document.writeln(" 是否为移动终端: " + browser.versions.mobile);
+                                   //document.writeln(" ios终端: " + browser.versions.ios);
+                                   //document.writeln(" android终端: " + browser.versions.android);
+                                   //document.writeln(" 是否为iPhone: " + browser.versions.iPhone);
+                                   //document.writeln(" 是否iPad: " + browser.versions.iPad);
+                                   // ]]>
+	</script>
+
+	<script>
+
+		var autoDetector = true ,timer = null;
+        if(autoDetector){
+            setTimeout(function(){
+                       handler()
+                       },500);
+        }
+
+        /* -- 自动唤起客户端或者去AppleStore */
+        function handler(){
+            if(timer !==  null){return}
+            if(browser.versions.iPhone || browser.versions.iPad) {
+                //微信分享不建议直接前往AppleStore，先去不同模板的商品详情页
+                //var appstore = 'http://itunes.apple.com/cn/app/ju-hua-suan-pin-zhi-tuan-gou/id534159732?ls=1&mt=8';
+                // var appstore = '';
+                if (itemId) {
+
+                	location.href= "jhsExSupport://item/?{\"itemIds\":[\""+itemId+"\"]}";
+
+                };
+                 //location.href="jhsExSupport://url/?{\"url\":\"http://www.baidu.com\",\"title\":\"baidu\"}";
+                
+            }
+        }
+
+	</script>
+
+	<style>
+	*{margin:0;padding:0;}
+	table{border-collapse:collapse;border-spacing:0;}
+	h1,h2,h3,h4,h5,h6{font-size:100%;}
+	ul,ol,li{list-style:none;}
+	em,i{font-style:normal;}
+	img{border:none;}
+	input,img{vertical-align:middle;}
+	body{color:#000;font-family:arial;background:#FFF;}
+	.clearfix:after{display:block;content:'';clear:both;visibility:hidden;}
+	.none{display:none;}
+	.no-spacing{margin:0;padding:0;}
+	.margin-center{margin:0 auto;text-align:center;}
+	body{background-color:#eeeeee !important;}
+	.content{
+		width:320px;
+		margin:0 auto;
+		background-color: #f5f5f5;
+		color:#333;
+	}
+	.client{
+		height:40px;
+		line-height: 40px;
+		background-color: #3e4143;
+		color:#fff;
+		text-align: right;
+		padding: 0 10px;
+	}
+	.client .btn-down, .client .btn-down:visited,.client .btn-down:hover{
+		display:inline-block;
+		height:30px;
+		padding:0 10px;
+		color:#fff;
+		text-decoration: none;
+		line-height: 34px;
+		border:1px solid #101010;
+		-webkit-border-radius:3px;
+		border-radius:3px;
+		background-color: #161717;
+		vertical-align: middle;
+		cursor: pointer;
+		-webkit-box-shadow: inset 0px 1px -2px 2px #202020;
+		box-shadow:inset 0px 1px -2px 2px #202020;
+		background: -webkit-linear-gradient(top, #282929 0%,#151515 100%);
+		background: linear-gradient(to bottom, #282929 0%,#151515 100%);
+	}
+	.client .status{
+		float:left;
+		vertical-align: middle;
+	}
+
+	.item{
+		padding: 10px 10px 6px;
+	}
+	.item .pic{
+		width:300px;
+		height:200px;
+		overflow: hidden;
+		position:relative;
+		-webkit-border-radius:4px;
+		border-radius:4px;
+		-webkit-box-shadow: inset 1px 1px 1px 1px #e2caab;
+		box-shadow: inset 1px 1px 1px 1px #e2caab;
+	}
+	.item .pic img{
+		
+	}
+	.item .iteminfo{
+		height: 46px;
+		width:300px;
+		background: url(http://img03.taobaocdn.com/tps/i3/T1HivKXoXcXXao83jo-600-123.png) no-repeat 0 0;
+		background-size:300px 62px;
+		position:relative;
+		top: -7px;
+		padding-top: 16px;
+		position: relative;
+	}
+	.item h2{
+		
+	}
+	.item .price{
+		height:30px;
+		
+		width:90px;
+		background: url(http://img02.taobaocdn.com/tps/i2/T1YJnFXdxpXXcS2FYh-200-80.png) no-repeat 0 0;
+		background-size: 100px 40px;
+		position: absolute;
+		right: 0;
+		top: 15px;
+		color:#fff;
+		font-size: 12px;
+		text-align: center;
+		padding-left: 10px;
+		padding-top:10px;
+	}
+
+	.unbegin .price{
+		background-image:url(http://img04.taobaocdn.com/tps/i4/T12IHLXi4XXXcS2FYh-200-80.png);
+	}
+	.finish .price{
+		background-image: url(http://img03.taobaocdn.com/tps/i3/T1.JvLXghXXXcS2FYh-200-80.png)
+	}
+	.item a.item-link, .item a.item-link:visited, .item a.item-link:hover{
+		text-decoration: none;
+		color:#fff;
+	}
+	.item .price strong{
+		font-weight: normal;
+		font-size:18px;
+		vertical-align: bottom;
+		line-height:18px;
+	}
+	.item .price em, .item .price i{
+		font-weight: normal;
+		font-size: 12px;
+		vertical-align: bottom;
+	}
+	.item h2{
+		margin-left:10px;
+		color:#333;
+	}
+	.item .metas{
+		color:#aaa;
+		font-size:12px;
+		margin:3px 0 0 10px;
+	}
+	.item .metas del{
+		margin-right:10px;
+	}
+
+	.options{
+		padding:0 10px 10px;
+	}
+	.options a, .options a:visited,.options a:hover{
+		width:143px;
+		height:42px;
+		line-height:42px;
+		display: inline-block;
+		font-size:16px;
+		border:1px solid #cccccc;
+		-webkit-border-radius:4px;
+		border-radius:4px;
+		background: -webkit-linear-gradient(top, #eeeeee 0%,#dddddd 100%);
+		background: linear-gradient(to bottom, #eeeeee 0%,#dddddd 100%);
+		text-align: center;
+		color:#000;
+		text-decoration: none;
+	}
+	.options .btn-buy,.options .btn-buy:visited,.options .btn-buy:hover{
+		color:#fff;
+		border-color:#a6152d;
+		background: -webkit-linear-gradient(top, #d43e5c 0%,#b21427 100%);
+		background: linear-gradient(to bottom, #d43e5c 0%,#b21427 100%);
+		margin-left:4px;
+	}
+
+	</style>
+</head>
+<body>
+	<div class="content">
+		<div class="client">
+			<p class="status">尚未安装客户端？</p>
+			<a class="btn-down" href="http://itunes.apple.com/cn/app/ju-hua-suan-pin-zhi-tuan-gou/id534159732?ls=1&mt=8">下载客户端</a>
+		</div>
+		<!-- 状态：正常-"item"；未开始-"item unbegin"；卖光、结束-"item finish" -->
+		<div class="item ">
+			<a class="item-link" href="http://a.m.taobao.com/i15658865600.htm"> <!-- 商品购买链接 -->
+			<div class="pic">
+				<img width="300" src="http://img03.taobaocdn.com/tps/i3/T1PazFXgdqXXb2k.Ar-640-447.png" />
+				<s class="pic-mask"></s>
+			</div>
+			<div class="iteminfo">
+			<h2>牛奶原味奶酪</h2>
+			<p class="metas">
+				<del>&yen; 2333.00</del>
+				<span>232323 人已购买</span>
+			</p>
+			<div class="price">
+				<i>&yen;</i>
+				<strong>899</strong><em>.99</em>
+			</div>
+			</div>
+			</a>
+		</div>
+		<div class="options">
+			<a class="btn-follow" href="">关注聚划算</a>
+			<a class="btn-buy" href="http://a.m.taobao.com/i15658865600.htm" >直接购买</a>
+		</div>
+	</div>
+
+
+
+</body>
+</html>

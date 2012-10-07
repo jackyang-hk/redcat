@@ -1,0 +1,200 @@
+    body{background-color:#f5f5f5;
+        font-family:arial;
+        color: #000;
+        font-size: 12px;
+    }
+	.clearfix:after{display:block;content:'';clear:both;visibility:hidden;}
+	.none{display:none;}
+	.no-spacing{margin:0;padding:0;}
+	.margin-center{margin:0 auto;text-align:center;}
+	.content{
+		width:320px;
+        height: 540px;
+        overflow:scroll;
+        overflow-x:hidden; 
+		margin:0 auto;
+		background-color: #f5f5f5;
+		color:#333;
+	}
+	.client{
+		height:40px;
+		line-height: 40px;
+		background-color: #3e4143;
+		color:#fff;
+		text-align: right;
+		padding: 0 10px;
+	}
+
+    header{
+        width: 320px;
+        height: 40px;
+        margin: 0 auto;
+        background: -webkit-linear-gradient(top, #f0f0f0 0%,#e1e1e1 100%);
+        background: linear-gradient(to bottom, #f0f0f0 0%,#e1e1e1 100%);
+        box-shadow: 0px 2px 4px 2px  #000;
+        border-bottom: 1px solid #ccc;
+    }
+
+    header a{
+        display: block;
+        height: 40px;
+        float: left;
+        text-align: center;
+        line-height: 40px;
+        color: #666;
+    }
+
+
+
+
+    #left{
+        width: 20%;
+        visibility: hidden;
+    }
+
+
+    #cata_switch{
+        width: 60%;
+    }
+
+    #right{
+        width: 20%;
+        visibility: hidden;
+    }
+
+
+    .catalog{
+    	width: 300px;
+    	background: #fff;
+    	border: 1px solid #dcdcdc;
+    	border-radius: 4px;
+    	position: absolute;
+    	top: 50px;
+    	left: 50%;
+    	margin-left: -150px;
+    	z-index: 999;
+    	display: none;
+    }
+
+    .catalog div{
+    	padding: 20px;
+    }
+
+    .catalog div nav a{
+    	width: 20%;
+    	float: left;
+    	height: 40px;
+    	text-align: center;
+    	line-height: 40px;
+    	color: #666;
+    	font-size: 14px;
+    	text-decoration: none;
+    }
+
+    .catalog div nav a:hover{
+    	color: #c7223d;
+    }
+
+
+	.client .btn-down, .client .btn-down:visited,.client .btn-down:hover{
+		display:inline-block;
+		height:30px;
+		padding:0 10px;
+		color:#fff;
+		text-decoration: none;
+		line-height: 34px;
+		border:1px solid #101010;
+		-webkit-border-radius:3px;
+		border-radius:3px;
+		background-color: #161717;
+		vertical-align: middle;
+		cursor: pointer;
+		-webkit-box-shadow: inset 0px 1px -2px 2px #202020;
+		box-shadow:inset 0px 1px -2px 2px #202020;
+		background: -webkit-linear-gradient(top, #282929 0%,#151515 100%);
+		background: linear-gradient(to bottom, #282929 0%,#151515 100%);
+	}
+	.client .status{
+		float:left;
+		vertical-align: middle;
+	}
+
+	.item{
+		padding: 10px 10px 6px;
+	}
+	.item .pic{
+		width:300px;
+		height:200px;
+		overflow: hidden;
+		position:relative;
+		-webkit-border-radius:4px;
+		border-radius:4px;
+		-webkit-box-shadow: inset 1px 1px 1px 1px #e2caab;
+		box-shadow: inset 1px 1px 1px 1px #e2caab;
+	}
+	.item .pic img{
+		
+	}
+	.item .iteminfo{
+		height: 46px;
+		width:300px;
+		background: url(http://img03.taobaocdn.com/tps/i3/T1HivKXoXcXXao83jo-600-123.png) no-repeat 0 0;
+		background-size:300px 62px;
+		position:relative;
+		top: -7px;
+		padding-top: 16px;
+		position: relative;
+	}
+	.item h2{
+		
+	}
+	.item .price{
+		height:30px;
+		
+		width:90px;
+		background: url(http://img02.taobaocdn.com/tps/i2/T1YJnFXdxpXXcS2FYh-200-80.png) no-repeat 0 0;
+		background-size: 100px 40px;
+		position: absolute;
+		right: 0;
+		top: 15px;
+		color:#fff;
+		font-size: 12px;
+		text-align: center;
+		padding-left: 10px;
+		padding-top:10px;
+	}
+
+	.unbegin .price{
+		background-image:url(http://img04.taobaocdn.com/tps/i4/T12IHLXi4XXXcS2FYh-200-80.png);
+	}
+	.finish .price{
+		background-image: url(http://img03.taobaocdn.com/tps/i3/T1.JvLXghXXXcS2FYh-200-80.png)
+	}
+	.item a.item-link, .item a.item-link:visited, .item a.item-link:hover{
+		text-decoration: none;
+		color:#fff;
+	}
+	.item .price strong{
+		font-weight: normal;
+		font-size:18px;
+		vertical-align: bottom;
+		line-height:18px;
+	}
+	.item .price em, .item .price i{
+		font-weight: normal;
+		font-size: 12px;
+		vertical-align: bottom;
+	}
+	.item h2{
+		margin-left:10px;
+		color:#333;
+	}
+	.item .metas{
+		color:#aaa;
+		font-size:12px;
+		margin:3px 0 0 10px;
+	}
+	.item .metas del{
+		margin-right:10px;
+	}
+
